@@ -1,21 +1,24 @@
+/* Gaya elemen global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #0099cc;
 }
 
 header {
     background-color: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 1rem;
 }
-
-header h1 {
-    margin: 0;
-}
-
 nav a {
     color: #fff;
     text-decoration: none;
@@ -25,24 +28,166 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
-
-section {
-    padding: 2rem;
+h1 {
+    margin: 0;
+    font-size: 36px;
 }
 
-section h2 {
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
     margin-top: 0;
+    color: #0099cc;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.project {
+    margin-bottom: 15px;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
 }
 
-.social-media img {
-    width: 30px;
-    height: 30px;
-    margin: 0 0.5rem;
+/* Responsif */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .profile {
+        text-align: center;
+    }
 }
+
+/* Desain profil */
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Desain media sosial */
+#social ul {
+    display: flex;
+    justify-content: center;
+}
+
+#social li {
+    margin: 0 10px;
+}
+
+#social li a {
+    color: #0099cc;
+}
+
+/* Efek Hover */
+section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Animasi Tim */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#team .profile {
+    animation: fadeInUp 0.5s ease;
+    animation-fill-mode: both;
+}
+
+/* Tampilan desktop */
+@media screen and (min-width: 769px) {
+    /* Gaya untuk tampilan desktop */
+    header {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 30px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .profile {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+    }
+
+    #team {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* Tampilan handphone */
+@media screen and (max-width: 768px) {
+    /* Gaya untuk tampilan handphone */
+    header {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .profile {
+        display: block;
+        width: 100%;
+    }
+        }
